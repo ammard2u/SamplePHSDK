@@ -18,7 +18,7 @@ public class PublicApplication extends Application {
         super.onCreate();
 
         Doctor2uSdkBuilder
-                .withApplication(this, "BVfpebM1B2dff_5g96FUph4_n6CjOTFvlpuGihvXCfRHIs_e0kklorNdiP5_mYRytXgAtIvvG6RGzmoi2ABtJQ")
+                .withApplication(this, "<Partner token here>")
                 .setCountry(Doctor2uSdk.Country.PHILIPPINES)
                 .setDebug(true)
                 .setHasEcommerce(false)
