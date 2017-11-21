@@ -17,15 +17,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.btnHello).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ArrayList<Coverage> coverageArrayList = new ArrayList<>();
-                coverageArrayList.add(new Coverage(Common.FeatureType.HOMEVISIT, Common.CoverageType.PERCENT, 50));
+        findViewById(R.id.btnHello).setOnClickListener(view -> {
+            ArrayList<Coverage> coverageArrayList = new ArrayList<>();
+            coverageArrayList.add(new Coverage(Common.FeatureType.HOMEVISIT, Common.CoverageType.PERCENT, 50));
 
-                Doctor2uSdk.getInstance().show(MainActivity.this,
-                        "ladieadfadfas@man.com", "Test SDK User", "+60102515285", coverageArrayList, "Patient policy number");
-            }
+            Doctor2uSdk.getInstance().show(MainActivity.this, getLifecycle(),
+                    "ladieadfadfas@man.com", "Test SDK User", "+60102515285", coverageArrayList, "Patient policy number");
         });
     }
 }
