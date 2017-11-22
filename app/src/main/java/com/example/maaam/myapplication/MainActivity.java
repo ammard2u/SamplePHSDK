@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<Coverage> coverageArrayList = new ArrayList<>();
             coverageArrayList.add(new Coverage(Common.FeatureType.HOMEVISIT, Common.CoverageType.PERCENT, 50));
 
-            Doctor2uSdk.getInstance().show(MainActivity.this, getLifecycle(),
-                    "ladieadfadfas@man.com", "Test SDK User", "+60102515285", coverageArrayList, "Patient policy number");
+            Doctor2uSdk.getInstance().show(MainActivity.this,
+                    "ladieadfadfas@man.com", "Test SDK User", "+60000", coverageArrayList, "Patient policy number");
         });
     }
 }
