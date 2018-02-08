@@ -18,11 +18,13 @@ public class PublicApplication extends Application {
         super.onCreate();
 
         Doctor2uSdkBuilder
-                .withApplication(this, "")
+                .withApplication(this, "", BuildConfig.APPLICATION_ID)
                 .setCountry(Doctor2uSdk.Country.PHILIPPINES)
-                .setDebug(true)
-                .setHasEcommerce(false)
-                .setHasProfile(true)
+                .setDebug(false)
+                .setEnableVideo(true)
+                .setEnableHomeCare(true)
+                .setEnableAmbulance(true)
+                .setEnableMedication(true)
                 .initialize();
 
     }
